@@ -17,6 +17,7 @@ import (
 	"terraform-provider-orcasecurity/orcasecurity/group"
 	"terraform-provider-orcasecurity/orcasecurity/jira_template"
 	"terraform-provider-orcasecurity/orcasecurity/organizations"
+	"terraform-provider-orcasecurity/orcasecurity/scan_configuration"
 	"terraform-provider-orcasecurity/orcasecurity/shift_left_cve_exception_list"
 	"terraform-provider-orcasecurity/orcasecurity/shift_left_project"
 	"terraform-provider-orcasecurity/orcasecurity/sonar"
@@ -214,5 +215,6 @@ func (p *orcasecurityProvider) Resources(_ context.Context) []func() resource.Re
 		shift_left_project.NewShiftLeftProjectResource,
 		shift_left_cve_exception_list.NewShiftLeftCveExceptionListResource,
 		trusted_cloud_account.NewTrustedCloudAccountResource,
+		scan_configuration.NewScanConfigurationRuleResource,
 	}
 }
