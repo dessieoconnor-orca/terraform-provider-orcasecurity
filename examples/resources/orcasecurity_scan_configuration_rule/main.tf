@@ -9,9 +9,9 @@ terraform {
 provider "orcasecurity" {}
 
 resource "orcasecurity_scan_configuration_rule" "managed_db_do_not_scan" {
-  rule_name       = "Des test tf provider"
-  rule_priority   = 21
-  is_enabled_rule = false
+  rule_name       = "TF generated rule"
+  rule_priority   = 100
+  is_enabled_rule = true
   is_default_rule = false
 
   feature = "Managed DB Scanning"
